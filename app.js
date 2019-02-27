@@ -6,8 +6,17 @@ var logger = require('morgan');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+//自己写的注册路由
+var registerRouter = require('./routes/register');
+var loginRouter = require('./routes/login');
 
 var app = express();
+
+//------------连接数据库---------------------
+var mongoose  = require("mongoose");
+
+mongoose.connect("mongodb://127.0.0.1:27017/smallMarket");
+//------------连接数据库---------------------
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -21,6 +30,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+//自己写的注册路由
+app.use('/register',registerRouter);
+app.use('/login',loginRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
