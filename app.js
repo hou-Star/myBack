@@ -9,6 +9,7 @@ var usersRouter = require('./routes/users');
 //自己写的注册路由
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
+var uploadRouter = require('./routes/upload');
 
 var app = express();
 
@@ -33,6 +34,7 @@ app.use('/users', usersRouter);
 //自己写的注册路由
 app.use('/register',registerRouter);
 app.use('/login',loginRouter);
+app.use('/upload',uploadRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

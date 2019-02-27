@@ -7,8 +7,8 @@ router.post('/', function(req, res, next) {
    console.log('req====',req.body.username);
    console.log('req====',req.body.password);
   userModel.find({
-    name:req.body.username,
-    pass:req.body.password
+    username:req.body.username,
+    password:req.body.password
   }).then(result=>{
     console.log('result==', result);
     if(result.length==0){
