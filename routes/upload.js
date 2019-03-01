@@ -14,6 +14,7 @@ router.post('/',upload.single('productImg'), function(req, res, next) {
     productType:req.body.productType,
     newDegree:req.body.newDegree,
     productDescription:req.body.productDescription,
+    productPrice:req.body.productPrice,
     productImg:'/uploads/' + req.file.filename
   }).then(result=>{
     console.log('suncess');

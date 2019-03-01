@@ -9,7 +9,8 @@ var obj = {
 	productType:String,
 	newDegree:String,
 	productDescription:String,
-	productImg:String	
+	productImg:String,
+	productPrice:String	
 	// Array Number , Date,Object
 }
 

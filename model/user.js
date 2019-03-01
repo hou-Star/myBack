@@ -9,7 +9,8 @@ var obj = {
 	password:String,
 	phone:String,
 	website:String,
-	introduction:String	
+	introduction:String,
+	headImg:String	
 	// Array Number , Date,Object
 }
 
