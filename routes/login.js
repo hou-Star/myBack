@@ -13,7 +13,7 @@ router.post('/', function(req, res, next) {
     console.log('result==', result);
     if(result.length==0){
       //用户名密码不匹配
-      // res.render('login', { title: 'login',isShow:true })
+    
        res.send({
          ok:0
        })
@@ -22,8 +22,7 @@ router.post('/', function(req, res, next) {
       //为钥匙 分配房间
       // req.cookies["kerwinNodeSessID"]
       req.session.whatever=result[0] //当前登陆用户的个人信息
-      console.log(req.session.whatever);
-      // res.redirect("/");
+      console.log('个人信息', req.session.whatever);
       
        res.json({
          ok:1,

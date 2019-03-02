@@ -6,10 +6,12 @@ var multer = require("multer");
 var upload = multer({ dest: 'public/uploads/'});
 /* GET users listing. */
 router.post('/',upload.single('productImg'), function(req, res, next) {
-  console.log('reqsssss');
+/*  console.log('reqsssss');
   console.log(req);
-  console.log(req.file);
+  console.log(req.file);*/
+  
   productModel.create({
+    userid:req.session.whatever.id,
     productName:req.body.productName,
     productType:req.body.productType,
     newDegree:req.body.newDegree,
