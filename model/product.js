@@ -5,7 +5,7 @@ var Schema = mongoose.Schema;
 
 
 var obj = {
-	user_id:{type:Schema.ObjectId, ref:'use'},
+	userid:{type:Schema.ObjectId, ref:'user'},
 	productName:String,
 	productType:String,
 	newDegree:String,

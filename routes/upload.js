@@ -9,9 +9,9 @@ router.post('/',upload.single('productImg'), function(req, res, next) {
 /*  console.log('reqsssss');
   console.log(req);
   console.log(req.file);*/
-  
+  console.log(req.session.whatever,'ssssssssssssss');
   productModel.create({
-    userid:req.session.whatever.id,
+    userid:req.session.whatever._id,
     productName:req.body.productName,
     productType:req.body.productType,
     newDegree:req.body.newDegree,
