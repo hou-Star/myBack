@@ -10,12 +10,21 @@ router.get('/', function(req, res, next) {
   // }).catch(error=>{
   //     console.log('errorrrrrrrrrr');
   // })
-  productModel.find().populate({path:'userid',select:'website'}).then(result=>{
-    console.log('result==', result);
-    res.json(result);   
-  }).catch(error=>{
-      console.log('errorrrrrrrrrr');
-  })
+  if(req.query.type==0){
+    productModel.find().populate({path:'userid',select:'website'}).then(result=>{
+      console.log('result==', result);
+      res.json(result);   
+    }).catch(error=>{
+        console.log('errorrrrrrrrrr');
+    })
+  }else{
+    productModel.find({productType:req.query.type}).populate({path:'userid',select:'website'}).then(result=>{
+      console.log('result==', result);
+      res.json(result);   
+    }).catch(error=>{
+        console.log('errorrrrrrrrrr');
+    })    
+  }
 })
 
 module.exports = router;
