@@ -4,8 +4,8 @@ var userModel = require("../model/user")
 
 /* GET users listing. */
 router.post('/', function(req, res, next) {
-   console.log('req====',req.body.username);
-   console.log('req====',req.body.password);
+   // console.log('req====',req.body.username);
+   // console.log('req====',req.body.password);
   userModel.find({
     username:req.body.username,
     password:req.body.password

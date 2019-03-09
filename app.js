@@ -13,6 +13,7 @@ var loginRouter = require('./routes/login');
 var uploadRouter = require('./routes/upload');
 var getProductsRouter = require('./routes/getProducts');
 var getProductRouter = require('./routes/getProduct');
+var getMyProductsRouter = require('./routes/getMyProducts');
 
 var app = express();
 
@@ -48,6 +49,7 @@ app.use('/login',loginRouter);
 app.use('/upload',uploadRouter);
 app.use('/getProducts',getProductsRouter);
 app.use('/getProduct',getProductRouter);
+app.use('/getMyProducts',getMyProductsRouter);
 
 //session配置
 // catch 404 and forward to error handler
