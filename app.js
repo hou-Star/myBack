@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 //自己写的注册路由
 var registerRouter = require('./routes/register');
 var loginRouter = require('./routes/login');
+var logoutRouter = require('./routes/logout');
 var uploadRouter = require('./routes/upload');
 var getProductsRouter = require('./routes/getProducts');
 var getProductRouter = require('./routes/getProduct');
@@ -46,6 +47,7 @@ app.use('/users', usersRouter);
 //自己写的注册路由
 app.use('/register',registerRouter);
 app.use('/login',loginRouter);
+app.use('/logout',logoutRouter);
 app.use('/upload',uploadRouter);
 app.use('/getProducts',getProductsRouter);
 app.use('/getProduct',getProductRouter);
