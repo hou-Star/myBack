@@ -14,6 +14,8 @@ var logoutRouter = require('./routes/logout');
 var uploadRouter = require('./routes/upload');
 var getProductsRouter = require('./routes/getProducts');
 var getProductRouter = require('./routes/getProduct');
+var modifyProdRouter = require('./routes/modifyProd');
+var delProdRouter = require('./routes/delProd');
 var getMyProductsRouter = require('./routes/getMyProducts');
 
 var app = express();
@@ -51,6 +53,8 @@ app.use('/logout',logoutRouter);
 app.use('/upload',uploadRouter);
 app.use('/getProducts',getProductsRouter);
 app.use('/getProduct',getProductRouter);
+app.use('/modifyProd',modifyProdRouter);
+app.use('/delProd',delProdRouter);
 app.use('/getMyProducts',getMyProductsRouter);
 
 //session配置

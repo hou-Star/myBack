@@ -6,7 +6,7 @@ var userModel = require("../model/user")
 router.get('/', function(req, res, next) {
   
   productModel.find({_id:req.query.id}).populate({path:'userid',select:['website','phone']}).then(result=>{
-    console.log('result==', result);
+    // console.log('result==', result);
     res.json(result);   
   }).catch(error=>{
       console.log('errorrrrrrrrrr');
